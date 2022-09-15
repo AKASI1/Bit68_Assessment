@@ -10,6 +10,8 @@ import returning from "../Assets/vuesax-linear-convert-3d-cube.svg";
 import leftArrow from "../Assets/arrow-right-1.svg";
 import rightArrow from "../Assets/arrow-right.svg";
 
+/*__________________________________________________________________________________________________*/
+
 const Box = styled.section`
   display: flex;
   margin: 70px auto 100px;
@@ -31,6 +33,7 @@ const Box = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
+
     .close {
       position: absolute;
       top: 30px;
@@ -42,12 +45,12 @@ const Box = styled.section`
       &:hover {
         color: #f44336;
       }
-
       @media (max-width: 992px) {
         top: 80px;
         right: 20px;
       }
     }
+
     .arrow {
       background-color: #f6f6f6;
       cursor: pointer;
@@ -58,12 +61,12 @@ const Box = styled.section`
       &:hover {
         background-color: #eee;
       }
-
       @media (max-width: 992px) {
         width: 30px;
         padding: 4px;
       }
     }
+
     .sliderImg {
       width: 80%;
       height: 80vh;
@@ -75,6 +78,7 @@ const Box = styled.section`
       }
     }
   }
+  /*____________________________*/
 
   .images {
     flex: 1;
@@ -117,6 +121,7 @@ const Box = styled.section`
       }
     }
   }
+  /*____________________________*/
 
   .content {
     flex: 1;
@@ -147,6 +152,7 @@ const Box = styled.section`
           font-size: 12px;
         }
       }
+
       .inStock {
         display: block;
         margin: 4px 0 25px;
@@ -192,6 +198,7 @@ const Box = styled.section`
         transition: 0.2s;
       }
     }
+    /*____________________________*/
 
     .optionTitle {
       display: inline-block;
@@ -203,6 +210,7 @@ const Box = styled.section`
       display: flex;
       gap: 6px;
       margin-top: 8px;
+
       .option {
         padding: 20px 13;
         width: 115px;
@@ -218,7 +226,6 @@ const Box = styled.section`
         gap: 5px;
         cursor: pointer;
         transition: 0.2s;
-
         &:hover {
           color: black;
         }
@@ -265,7 +272,8 @@ const Box = styled.section`
         }
       }
     }
-
+    /*____________________________*/
+    
     .addCart {
       background-color: #0d4eb7;
       color: white;
@@ -297,11 +305,14 @@ const Box = styled.section`
   }
 `;
 
+/*__________________________________________________________________________________________________*/
+
 const ProductInfo = ({ product }) => {
   const [addFav, setAddFav] = useState(false);
   const [quantity, setQuantity] = useState(1);
   const [slideNumber, setSlideNumber] = useState(0);
   const [openSlider, SetOpenSlider] = useState(false);
+  /*____________________________*/
 
   let stars = [];
   for (let i = 0; i < 5; i++) {
@@ -314,6 +325,7 @@ const ProductInfo = ({ product }) => {
       />
     );
   }
+  /*____________________________*/
 
   const handleSlide = (direction) => {
     let newSlideNumber;
@@ -326,6 +338,7 @@ const ProductInfo = ({ product }) => {
 
     setSlideNumber(newSlideNumber);
   };
+  /*____________________________*/
 
   return (
     <Box className="container">
@@ -507,3 +520,5 @@ const ProductInfo = ({ product }) => {
 };
 
 export default ProductInfo;
+
+/*__________________________________________________________________________________________________*/
