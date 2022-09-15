@@ -14,8 +14,9 @@ const Box = styled.section`
     width: 100%;
     @media (max-width: 767px) {
       height: 220px;
-      width: fit-content;
-      margin-left: -250px;
+      width: 100%;
+      object-fit:cover;
+      /* margin-left: -250px; */
     }
   }
   /*____________________________*/
